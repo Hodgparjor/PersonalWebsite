@@ -4,6 +4,7 @@ import SkillCard from '../components/SkillCard';
 import CareerPoint from '../components/CareerPoint';
 import { careerPath } from '../data/career';
 import { educationPath } from '../data/education';
+import TypewriterText from '../components/TypewriterText';
 
 export default function Home() {
   const skillsRef = useRef<HTMLElement>(null);
@@ -57,7 +58,7 @@ export default function Home() {
               className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-accent"
             />
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-text-light dark:text-text-dark mb-6">
-              Hi, I'm Aleksander Brzostowski
+              <TypewriterText text="  Hi, I'm Aleksander Brzostowski" />
             </h1>
             <p className="text-xl text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto">
               .NET & React developer passionate about clean, maintainable code and elegant UI.

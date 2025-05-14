@@ -5,7 +5,7 @@ export default function Navbar() {
   const { isDark, toggleTheme } = useTheme();
 
   return (
-    <nav className="fixed top-0 w-full bg-primary-light/80 dark:bg-primary-dark/80 backdrop-blur-sm z-50">
+    <nav className="fixed top-0 w-full bg-primary-light/80 dark:bg-primary-dark/80 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -17,15 +17,15 @@ export default function Navbar() {
               />
             </Link>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 font-heading text-lg">
             <Link to="/about" className="text-text-light dark:text-text-dark hover:text-accent transition-colors">
-              About
-            </Link>
-            <Link to="/journey" className="text-text-light dark:text-text-dark hover:text-accent transition-colors">
-              Journey
+              <span className="text-accent">AB</span>out me
             </Link>
             <Link to="/portfolio" className="text-text-light dark:text-text-dark hover:text-accent transition-colors">
               Portfolio
+            </Link>
+            <Link to="/contact" className="text-text-light dark:text-text-dark hover:text-accent transition-colors">
+              Contact
             </Link>
             <button
               onClick={toggleTheme}
