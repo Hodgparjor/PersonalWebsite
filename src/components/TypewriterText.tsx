@@ -5,7 +5,7 @@ interface TypewriterTextProps {
   delay?: number;
 }
 
-export default function TypewriterText({ text, delay = 100 }: TypewriterTextProps) {
+export default function TypewriterText({ text, delay = 75 }: TypewriterTextProps) {
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 
@@ -13,7 +13,7 @@ export default function TypewriterText({ text, delay = 100 }: TypewriterTextProp
     let i = 0;
     const typing = setInterval(() => {
       if (i < text.length) {
-        setDisplayText(prev => prev + text.charAt(i));
+        setDisplayText(text.substring(0, i + 1));
         i++;
       } else {
         clearInterval(typing);

@@ -3,12 +3,12 @@ import ProjectCard from '../components/ProjectCard';
 export default function Portfolio() {
   const projects = [
     {
-      title: "ERP System Module",
-      date: "2023",
+      title: "Master Controller of Industrial Compressors",
+      date: "2023-2024",
       category: "work" as const,
-      technologies: ["C#", ".NET", "React", "SQL"],
-      images: ["/assets/images/project1.jpg"],
-      description: "Led the development of a critical ERP module that improved company efficiency by 40%.",
+      technologies: ["C#", "WinForms", ".NET"],
+      images: ["/assets/images/projects/mtcontrol_1.jpg", "/assets/images/projects/mtcontrol_2.jpg", "/assets/images/projects/mtcontrol_3.jpg"],
+      description: "Developed master controller for industrial compressors, allowing to automate and optimize operation of compressed air network, and save up to 26% energy.",
       githubUrl: undefined
     },
     {
