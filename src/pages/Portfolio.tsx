@@ -16,7 +16,7 @@ export default function Portfolio() {
       date: "2023",
       category: "personal" as const,
       technologies: ["Python", "TensorFlow", "OpenCV"],
-      images: ["/assets/images/project2.jpg"],
+      images: ["/assets/images/projects/mtcontrol_3.jpg"],
       description: "Developed an AI-powered image recognition system using deep learning.",
       githubUrl: "https://github.com/yourusername/project"
     },

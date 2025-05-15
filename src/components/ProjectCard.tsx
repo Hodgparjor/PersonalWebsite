@@ -20,16 +20,27 @@ export default function ProjectCard({
   githubUrl
 }: ProjectCardProps) {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    if (images.length <= 1) return;
+    if (images.length <= 1 || isHovering) return;
 
     const interval = setInterval(() => {
       setCurrentImage(current => (current + 1) % images.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, isHovering]);
+
+  const handlePrevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImage((current) => (current - 1 + images.length) % images.length);
+  };
+
+  const handleNextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImage((current) => (current + 1) % images.length);
+  };
 
   const getCategoryColor = () => {
     switch (category) {
@@ -42,11 +53,37 @@ export default function ProjectCard({
   return (
     <div className="h-full">
       <div className="bg-white/50 dark:bg-white/5 rounded-lg overflow-hidden backdrop-blur-sm hover:scale-105 transition-transform duration-300">
-        <img 
-          src={images[currentImage]} 
-          alt={title}
-          className="w-full h-96 object-cover"
-        />
+        <div 
+          className="relative w-full h-96 bg-secondary-light dark:bg-white/5"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          <img 
+            src={images[currentImage]} 
+            alt={title}
+            className="w-full h-full object-contain"
+          />
+          {images.length > 1 && isHovering && (
+            <>
+              <button
+                onClick={handlePrevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={handleNextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </>
+          )}
+        </div>
         <div className="p-6">
           <h3 className="text-xl font-semibold text-accent mb-2">
             {title}

@@ -6,14 +6,18 @@ import { educationPath } from '../data/education';
 export default function About() {
   const technicalSkills = [
     { name: '.NET C#', level: 85, text: 'Advanced' },
-    { name: 'React', level: 75, text: 'Advanced' },
-    { name: 'TypeScript', level: 70, text: 'Intermediate' },
+    { name: 'SQL and Databases', level: 65, text: 'Intermediate' },
+    { name: 'React', level: 35, text: 'Basic' },
   ];
 
   const softSkills = [
     'Team Leadership',
+    'Project Management',
     'Problem Solving',
+    'Critical Thinking',
     'Communication',
+    'SOLID Principles',
+    'Design Patterns',
   ];
 
   return (

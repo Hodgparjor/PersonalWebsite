@@ -23,25 +23,34 @@ export default function Home() {
 
   const technicalSkills = [
     { name: '.NET C#', level: 85, text: 'Advanced' },
-    { name: 'React', level: 75, text: 'Advanced' },
-    { name: 'TypeScript', level: 70, text: 'Intermediate' },
-    { name: 'SQL', level: 85, text: 'Advanced' },
-    { name: 'Azure', level: 65, text: 'Intermediate' }
+    { name: 'Java', level: 55, text: 'Intermediate' },
+    { name: 'Python', level: 55, text: 'Intermediate' },
+    { name: 'C/C++', level: 55, text: 'Intermediate' },
+    { name: 'React', level: 35, text: 'Basic' },
+    { name: 'TypeScript', level: 35, text: 'Basic' },
+    { name: 'HTML/CSS', level: 35, text: 'Basic' },
+    { name: 'SQL and Databases', level: 65, text: 'Intermediate' },
+    { name: 'MS Office', level: 85, text: 'Advanced' },
+    { name: 'GitHub', level: 65, text: 'Intermediate' }
   ];
 
   const languageSkills = [
     { name: 'Polish', level: 100, text: 'Native' },
     { name: 'English', level: 90, text: 'Advanced' },
-    { name: 'German', level: 30, text: 'Basic' }
+    { name: 'German', level: 35, text: 'Basic' }
   ];
 
-  const softSkills = [
+  const otherSkills = [
     'Team Leadership',
+    'Strong Soft Skills',
     'Project Management',
     'Problem Solving',
+    'Critical Thinking',
     'Communication',
     'Agile Methodologies',
-    'Mentoring'
+    'SOLID Principles',
+    'Design Patterns',
+    'RESTful APIs'
   ];
 
   return (
@@ -129,7 +138,8 @@ export default function Home() {
               Other Skills
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
-              {softSkills.map(skill => (
+              {otherSkills
+          .map(skill => (
                 <span 
                   key={skill}
                   className="px-4 py-2 bg-accent/10 text-accent rounded-full"
