@@ -33,7 +33,7 @@ export default function About() {
             About Me
           </h1>
           <p className="text-xl text-text-light/80 dark:text-text-dark/80 max-w-3xl mx-auto mb-8">
-            I'm a passionate full-stack developer with expertise in .NET and React, currently leading IT projects at Marcom Tech.
+            I'm a passionate backend developer with expertise in C# .NET, currently leading IT projects at Marcom Tech and learning frontend technologies.
           </p>
           <p className="text-text-light/80 dark:text-text-dark/80 max-w-3xl mx-auto">
             With a strong foundation in backend development and a growing expertise in frontend technologies,

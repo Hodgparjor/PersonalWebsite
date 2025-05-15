@@ -30,6 +30,7 @@ export default function Home() {
     { name: 'TypeScript', level: 35, text: 'Basic' },
     { name: 'HTML/CSS', level: 35, text: 'Basic' },
     { name: 'SQL and Databases', level: 65, text: 'Intermediate' },
+    { name: 'Visual Studio 2022/Code', level: 85, text: 'Advanced' },
     { name: 'MS Office', level: 85, text: 'Advanced' },
     { name: 'GitHub', level: 65, text: 'Intermediate' }
   ];
@@ -70,7 +71,7 @@ export default function Home() {
               <TypewriterText text="Hi, I'm Aleksander Brzostowski" />
             </h1>
             <p className="text-xl text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto">
-              .NET & React developer passionate about clean, maintainable code and elegant UI.
+              C# .NET developer passionate about clean, maintainable code and elegant UI.
             </p>
             <div className="flex justify-center gap-6 mt-8">
               <a href="https://www.linkedin.com/in/aleksander-brzostowski-533b5523a" 

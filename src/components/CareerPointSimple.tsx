@@ -1,6 +1,6 @@
 import type { CareerEntry } from '../data/career';
 
-export default function CareerPointSimple({ company, logo, title, dates, description }: CareerEntry) {
+export default function CareerPointSimple({ company, logo, title, dates, longDescription }: CareerEntry) {
   return (
     <div className="mb-8">
       <div className="bg-white/50 dark:bg-white/5 rounded-lg p-6 backdrop-blur-sm hover:scale-105 transition-transform duration-300">
@@ -19,7 +19,7 @@ export default function CareerPointSimple({ company, logo, title, dates, descrip
           {dates}
         </p>
         <p className="text-text-light dark:text-text-dark">
-          {description}
+          {longDescription}
         </p>
       </div>
     </div>
