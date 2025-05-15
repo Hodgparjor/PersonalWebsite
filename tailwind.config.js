@@ -9,11 +9,11 @@ export default {
     extend: {
       colors: {
         primary: {
-          light: '#F2EAD3', // beige
+          light: '#EDE8E2', // beige 1. F2EAD3 2. EDE8E2 3. E8E1D4
           dark: '#1A1A1A',  // dark grey/black
         },
         secondary: {
-          light: '#DFD7BF', // slightly darker than primary beige
+          light: '#E5DDD2', //  slightly darker than primary beige 1. DFD7BF 2. E5DDD2 3. D1C6B4
           dark: '#242424',  // slightly lighter than primary dark
         },
         accent: {
